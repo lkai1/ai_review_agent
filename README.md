@@ -51,27 +51,38 @@ Do not use quotes around the key.
 
 The script (index.js) automatically loads .env using dotenv.
 
-4️⃣ Install the Global Git Pre-commit Hook
+4️⃣ Install the Global Git Pre-commit Hook (Windows)
 
-Run the following PowerShell block from any folder:
+Create the folder if it does nott exist:
 
-$hookPath="$env:USERPROFILE\.githooks\pre-commit"
-mkdir -Force $env:USERPROFILE\.githooks
-@'
+C:\Users\<your-username>\.githooks
+
+
+Create a file called:
+
+pre-commit
+
+
+No extension, just pre-commit.
+
+Paste this content into the file:
+
 #!/bin/bash
 echo "Running AI code review..."
-node "$HOME\ai_review_agent\index.js"
+node "C:/Users/<your-username>/ai_review_agent/index.js"
 status=$?
 if [ $status -ne 0 ]; then
   echo "Commit blocked by AI review."
   exit 1
 fi
-'@ | Out-File -Encoding UTF8 -NoNewline $hookPath
 
-# Make it executable in Git Bash
-git bash -c "chmod +x ~/.githooks/pre-commit"
 
-# Set Git global hooks path
+Replace <your-username> with your actual Windows username.
+
+Use forward slashes / in the path to avoid problems with Git Bash.
+
+Set the global Git hooks path:
+
 git config --global core.hooksPath "$env:USERPROFILE\.githooks"
 
 
