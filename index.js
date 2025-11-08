@@ -7,8 +7,6 @@
 import { execSync } from "child_process";
 import OpenAI from "openai";
 import readline from "readline";
-import path from "path";
-import fs from "fs";
 import 'dotenv/config';
 
 // === CONFIG ===
@@ -88,13 +86,10 @@ function askQuestion(query) {
 
     try {
         const review = await reviewDiff(diff);
-        const logPath = path.resolve(".ai-review.log");
-        fs.writeFileSync(logPath, review, "utf8");
 
         console.log("===== AI Review =====");
         console.log(review);
         console.log("=====================");
-        console.log(`Saved full review to ${logPath}`);
 
         // If no issues, proceed automatically
         if (/no issues/i.test(review)) {
