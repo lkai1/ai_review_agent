@@ -25,7 +25,7 @@ Follow these steps to get it running on your machine.
 
 ### 1️⃣ Clone the repository
 
-git clone https://github.com/your-username/ai_review_agent.git
+git clone https://github.com/lkai1/ai_review_agent.git
 cd ai_review_agent
 
 
@@ -132,7 +132,7 @@ Sensitive code is sent to OpenAI — avoid using on secret repositories unless y
 
 Clone repo:
 
-git clone https://github.com/your-username/ai_review_agent.git
+git clone https://github.com/lkai1/ai_review_agent.git
 cd ai_review_agent
 
 
