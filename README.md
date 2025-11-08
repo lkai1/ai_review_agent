@@ -25,12 +25,11 @@ Follow these steps to get it running on your machine.
 
 ### 1️⃣ Clone the repository
 
-```powershell
 git clone https://github.com/your-username/ai_review_agent.git
 cd ai_review_agent
 
 
-2️⃣ Install Node.js dependencies
+### 2️⃣ Install Node.js dependencies
 
 Make sure Node.js is installed. Then run:
 
@@ -39,7 +38,7 @@ npm install
 
 This installs all required packages (openai, dotenv, etc.).
 
-3️⃣ Set your OpenAI API Key in .env
+### 3️⃣ Set your OpenAI API Key in .env
 
 Create a .env file in the project root (ai_review_agent/.env) with the following content:
 
@@ -51,7 +50,7 @@ Do not use quotes around the key.
 
 The script (index.js) automatically loads .env using dotenv.
 
-4️⃣ Install the Global Git Pre-commit Hook (Windows)
+### 4️⃣ Install the Global Git Pre-commit Hook (Windows)
 
 Create the folder if it does nott exist:
 
@@ -88,7 +87,7 @@ git config --global core.hooksPath "$env:USERPROFILE\.githooks"
 
 ✅ This installs the hook globally, so it runs on every Git repository on your machine.
 
-5️⃣ Test the Setup
+### 5️⃣ Test the Setup
 
 Go to any Git repository and stage a change:
 
@@ -123,13 +122,13 @@ No issues found.
 =====================
 Do you want to proceed with the commit? (y/n):
 
-6️⃣ Optional Notes
+### 6️⃣ Optional Notes
 
 Works best in Git Bash or Windows Terminal.
 
 Sensitive code is sent to OpenAI — avoid using on secret repositories unless you are comfortable.
 
-✅ Quick Summary
+### ✅ Quick Summary
 
 Clone repo:
 
