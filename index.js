@@ -16,7 +16,6 @@ const apiKey = process.env.OPENAI_API_KEY;
 
 if (!apiKey) {
     console.error("ERROR: Missing OpenAI API key.");
-    console.error('Set it with:  setx OPENAI_API_KEY "sk-..."');
     process.exit(1);
 }
 
